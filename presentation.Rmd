@@ -44,28 +44,35 @@ style_xaringan(
 
 class: center, middle
 
-## What is correlation between Life Expectancy and Overall Happiness in the World?
+## What effect does Life Expectancy and Social Support have on Overall Happiness in the World?
 
 ---
 
 class: inverse, center, middle
 
-# Section title
+# Introduction
 
 ---
 
-# Hello World
+# Data Set
 
-- Click the `Knit` button to compile your presentation
+- Our data set is the World Happiness Report
 
-- Make sure to commit and push all resulting files to your GitHub repo
+- From the World Happiness Report website (https://worldhappiness.report/ed/2022)
+
+- 12 variables and 2089 observations
+
+- Variables: Country Name, Year, Life Ladder, log GDP per capita, Social support, Healthy life expectancy at birth, Freedom to make life choices, Generosity, Perceptions of corruption, Positive affect, Negative affect, Confidence in national government
 
 ---
 
-class: inverse, middle, center
+# Data set
 
-# Using xaringan
+```{r showing data set, echo = FALSE}
 
+glimpse(DataForTable2_1)
+
+```
 ---
 
 # xaringan
