@@ -1,7 +1,7 @@
 ---
 title: "Group Research Proposal"
 subtitle: "World Happiness Report"
-author: "Adian, Hrissy, Jack, Keyu"
+author: "Aidan, Hrissy, Jack, Keyu"
 institute: "University of Edinburgh"
 date: "`r Sys.Date()`"
 output:
