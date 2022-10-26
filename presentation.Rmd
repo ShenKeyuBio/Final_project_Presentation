@@ -44,7 +44,7 @@ style_xaringan(
 
 class: center, middle
 
-## A statement of the overall goal / research question
+## What is correlation between Life Expectancy and Overall Happiness in the World?
 
 ---
 
