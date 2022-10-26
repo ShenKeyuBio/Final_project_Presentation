@@ -163,9 +163,49 @@ ggplot(penguins, aes(x = bill_length_mm, y = species, color = species)) +
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
-```{r iris-table, echo = FALSE}
-kable(head(iris), format = "html")
+```{r DataForTable2_1-table, echo = FALSE}
+
+DataForTable2_1 %>%
+  select(country_name, year, life_ladder, healthy_life_expectancy_at_birth, social_support) %>%
+  filter(year == "2011" & healthy_life_expectancy_at_birth != "NA" & social_support != "NA") %>%
+  summarise(
+            min_happiness = min(life_ladder),
+            max_happiness = max(life_ladder),
+            avg_happiness = mean(life_ladder),
+            min_life_expectancy = min(healthy_life_expectancy_at_birth),
+            max_life_expectancy = max(healthy_life_expectancy_at_birth),
+            avg_life_expectancy = mean(healthy_life_expectancy_at_birth),
+            min_social_support = min(social_support),
+            max_social_support = max(social_support),
+            avg_social_support = mean(social_support))
+
+DataForTable2_1 %>%
+  select(country_name, year, life_ladder, healthy_life_expectancy_at_birth, social_support) %>%
+  filter(year == "2021" & healthy_life_expectancy_at_birth != "NA" & social_support != "NA") %>%
+  summarise(
+            min_happiness = min(life_ladder),
+            max_happiness = max(life_ladder),
+            avg_happiness = mean(life_ladder),
+            min_life_expectancy = min(healthy_life_expectancy_at_birth),
+            max_life_expectancy = max(healthy_life_expectancy_at_birth),
+            avg_life_expectancy = mean(healthy_life_expectancy_at_birth),
+            min_social_support = min(social_support),
+            max_social_support = max(social_support),
+            avg_social_support = mean(social_support))
+
 ```
+      Min Happiness  Max Happiness  Avg Happiness 
+2011      2.936          7.788           5.420
+2021      2.179          7.794           5.623
+
+      Min Life Expectancy   Max Life Expectancy   Avg Life Expectancy
+2011      33.32                   73.12                61.96
+2021      51.3                    74.35                65.37
+
+      Min Social Support    Max Social Support    Avg Social Support
+2011
+2021
+
 
 ---
 
