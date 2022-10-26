@@ -38,7 +38,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 
 ```{r include=FALSE}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/2x97kx7f.jpg"
 )
 ```
 
@@ -222,11 +222,18 @@ ggplot(penguins, aes(x = bill_length_mm, y = species, color = species)) +
 
 ---
 
-# Tables
+# Summary Statistics
 
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+```{r castle, echo = FALSE, out.width = "60%", fig.align = "center"}
+knitr::include_graphics("img/table.png")
+```
 
-```{r DataForTable2_1-table, echo = FALSE}
+
+---
+
+# Future Statistics
+
+```{echo = FALSE, include = FALSE}
 
 DataForTable2_1 %>%
   select(country_name, year, life_ladder, healthy_life_expectancy_at_birth, social_support) %>%
@@ -255,30 +262,16 @@ DataForTable2_1 %>%
             min_social_support = min(social_support),
             max_social_support = max(social_support),
             avg_social_support = mean(social_support))
-
-```
-      Min Happiness  Max Happiness  Avg Happiness 
-2011      2.936          7.788           5.420
-2021      2.179          7.794           5.623
-
-      Min Life Expectancy   Max Life Expectancy   Avg Life Expectancy
-2011      33.32                   73.12                61.96
-2021      51.3                    74.35                65.37
-
-      Min Social Support    Max Social Support    Avg Social Support
-2011
-2021
-
-
----
-
-# Images
-
-```{r castle, echo = FALSE, out.width = "60%", fig.align = "center", fig.cap = "Image credit: Photo by Jörg Angeli on Unsplash."}
-include_graphics("https://images.unsplash.com/photo-1535448033526-c0e85c9e6968?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80")
 ```
 
-Or you can also include a full page image. See next slide.
+Statistics and more that would be useful in answering our question:
+  - linear regression models
+  - correlation coefficient (r)
+  - coefficient of determination (R^2)
+
+Results that would support our hypothesized answer:
+  - high correlation coefficient
+  - high coefficient of determination to show our linear regressions are good models for          the data
 
 ---
 
