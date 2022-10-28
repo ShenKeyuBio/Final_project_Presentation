@@ -91,7 +91,7 @@ class: inverse, center, middle
 - The effects will also be compared between years and continents (Another dataset contains continents and countries will be joint to the main one). 
 
 ---
-# Life Expectancy
+# Life Expectancy for 2021
 
 ```{r life expectancy graph, echo = FALSE}
 DataForTable2_1 %>%
@@ -102,6 +102,8 @@ DataForTable2_1 %>%
   ) %>%
   ggplot(aes(x = healthy_life_expectancy_at_birth, y = life_ladder)) +
   geom_point() +
+  labs(x = "Healthy Life Expectancy",
+       y = "Life Ladder") +
   geom_smooth(
     formula = y ~ x,
     method = lm
@@ -114,7 +116,7 @@ DataForTable2_1 %>%
 ```
 ---
 
-# Social Support
+# Social Support for 2021
 
 ```{r social support, echo = FALSE}
 DataForTable2_1 %>%
@@ -125,6 +127,8 @@ DataForTable2_1 %>%
   ) %>%
   ggplot(aes(x = social_support, y = life_ladder)) +
   geom_point() +
+  labs(x = "Social Support",
+       y = "Life Ladder") +
   geom_smooth(
     formula = y ~ x,
     method = lm
@@ -132,7 +136,7 @@ DataForTable2_1 %>%
   ggpubr::stat_regline_equation(
     formula = y ~ x,
     show.legend = FALSE
-  )
+  ) 
 
 ```
 
