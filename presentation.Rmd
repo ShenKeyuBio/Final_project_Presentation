@@ -66,13 +66,19 @@ class: inverse, center, middle
 
 ---
 
-# Data set
+# Data Set
 
 ```{r showing data set, echo = FALSE}
 
 glimpse(DataForTable2_1)
 
 ```
+---
+
+class: inverse, center, middle
+
+# Data Analysis Plan
+
 ---
 
 # Variables
